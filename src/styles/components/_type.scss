@@ -1,10 +1,30 @@
-body {
-  font-family: sans-serif;
-  font-size: $size-text;
-  line-height: 1.5;
-  color: $c-text;
+@use "../utils/variables" as *;
+
+@font-face {
+  font-family: 'Epilogue-Variable';
+  src: url('../../assets/fonts/Epilogue-Variable.woff2') format('woff2'),
+       url('../../assets/fonts/Epilogue-Variable.woff') format('woff'),
+       url('../../assets/fonts/Epilogue-Variable.ttf') format('truetype');
+  font-weight: 100 900;
 }
 
-.title {
-  color: $c-alt;
+body {
+  font-family: 'Epilogue-Variable', sans-serif;
+  background-color: $bg-color;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+h2 {
+  font-weight: 800;
+}
+
+h3 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 500;
 }

@@ -1,5 +1,8 @@
-$c-bg: #efefef;
-$c-alt: #e41612;
-$c-text: #444;
+$heading-color: #5F28C2;
+$bg-color: #FFFEF8;
+$text-color: #392B3D;
+$gradient: -webkit-linear-gradient(0deg, #5928C3 0%, #CB21A9 100%);
 
-$size-text: 18px;
+$small-el-size : clamp(0.75rem, 0.5711rem + 0.5725vw, 0.9375rem);
+$h1-size: clamp(4.1875rem, 1.5736rem + 13.0693vw, 12.4375rem);
+$p-size: clamp(1rem, 0.9208rem + 0.396vw, 1.25rem);
