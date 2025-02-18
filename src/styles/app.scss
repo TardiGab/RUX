@@ -7,10 +7,10 @@ body {
 }
 
 .top {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
-  max-width: 100vw;
+  width: calc(100% - 2rem);
   z-index: 1000;
   display: flex;
   flex-direction: row;
@@ -125,6 +125,39 @@ body {
     position: absolute;
     top: 70px;
     right: -110px;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  &__fire {
+    background-image: url('../assets/images/Fire.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    vertical-align: middle; 
+    position: absolute;
+    top: 125px;
+    left: 150px;
+    transform: rotate(15deg);
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  &__frangipane {
+    background-image: url('../assets/images/Frangipane.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    height: 175px;
+    width: 175px;
+    vertical-align: middle; 
+    position: absolute;
+    top: 70px;
+    right: 250px;
     @media screen and (max-width: 768px) {
       display: none;
     }
