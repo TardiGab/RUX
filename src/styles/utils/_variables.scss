@@ -1,8 +1,14 @@
 $heading-color: #5F28C2;
+$situation-color: #EF89E3;
 $bg-color: #FFFEF8;
 $text-color: #392B3D;
 $gradient: -webkit-linear-gradient(0deg, #5928C3 0%, #CB21A9 100%);
 
 $small-el-size : clamp(0.75rem, 0.5711rem + 0.5725vw, 0.9375rem);
-$h1-size: clamp(4.1875rem, 1.5736rem + 13.0693vw, 12.4375rem);
+$h1-size: clamp(3.1875rem, 0.5446rem + 13.2143vw, 12.4375rem);
+$h2-size: clamp(2.375rem, 1.9286rem + 2.2321vw, 3.9375rem);
 $p-size: clamp(1rem, 0.9208rem + 0.396vw, 1.25rem);
+
+$border-radius: clamp(1rem, 0.8929rem + 0.5357vw, 1.375rem);
+$padding-container: clamp(1rem, 0.1607rem + 4.1964vw, 3.9375rem);
+$padding-container-small: clamp(1rem, 0.5893rem + 2.0536vw, 2.4375rem);
