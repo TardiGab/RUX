@@ -7,6 +7,13 @@ gsap.registerPlugin(Draggable);
 
 "use struct";
 
+const navButton = document.getElementById("navButton");
+const nav = document.getElementById("nav");
+
+navButton.addEventListener("click", function() {
+  nav.classList.toggle("active");
+});
+
 Draggable.create(".draggable", {
   bounds: ".header",
 });

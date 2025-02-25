@@ -3,6 +3,10 @@
 
 @use "components/type" as *;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -12,12 +16,12 @@ main {
   overflow-x: hidden;
 }
 
-img {
-  // Règles générales pour toutes les images
-  object-fit: cover;
-  max-width: 100%;
-  height: auto;
-  -webkit-backface-visibility: hidden;
+button {
+  // Reset button styles
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 
 .top {
@@ -41,9 +45,58 @@ img {
     font-weight: 700;
   }
 
+  &__right {
+    button {
+      transition: all .3s;
+      &:hover, &:focus {
+        font-weight: 700;
+        color: $heading-color;
+      }
+    }
+  }
+
   @media screen and (max-width: 768px) {
     &__left, &__middle-right {
       display: none;
+    }
+  }
+}
+
+.nav {
+  background-color: $bg-color;
+  width: fit-content;
+  padding: $padding-container-small;
+  border-radius: $border-radius;
+  border: 2px solid $text-color;
+  position: fixed;
+  top: 3rem;
+  right: 0;
+  z-index: 1000;
+  transform: translateX(110%);
+  transition: transform .3s ease-in-out;
+  margin-right: .5rem;
+  &.active {
+    transform: translateX(0);
+  }
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+  &__item {
+    display: inline-block;
+  }
+  &__link {
+    font-size: $p-size;
+    color: $text-color;
+    text-decoration: none;
+    transition: color .3s;
+    &:hover {
+      color: $heading-color;
     }
   }
 }
@@ -290,6 +343,14 @@ img {
       border-radius: $border-radius-images;
       border: 2px solid $text-color;
     }
+    &--horizontal {
+      display: block;
+      margin: auto;
+      width: 75%;
+      height: auto;
+      border-radius: $border-radius-images;
+      border: 2px solid $text-color;
+    }
     @media screen and (max-width: 768px) {
       width: 100%;
     }
@@ -314,7 +375,7 @@ img {
   }
 }
 
-.first-contact {
+.first-contact, .in-depth-study {
   background-image: url(../assets/images/circles-pattern.svg);
   background-size: 3vh;
   background-repeat: repeat;
@@ -330,7 +391,7 @@ img {
     width: 20%;
     height: 100%;
     background: linear-gradient(to left, $first-contact-color 0%, transparent 100%);
-    z-index: 1;
+    z-index: -1;
   }
   &__fade-out--left {
     position: absolute;
@@ -339,7 +400,7 @@ img {
     width: 20%;
     height: 100%;
     background: linear-gradient(to right, $first-contact-color 0%, transparent 100%);
-    z-index: 1;
+    z-index: -1;
   }
   &__fade-out--top {
     position: absolute;
@@ -389,12 +450,6 @@ img {
       width: 100%;
     }
   }
-  &__image {
-    width: 100%;
-    height: auto;
-    border-radius: $border-radius-images;
-    border: 2px solid $text-color;
-  }
   &__wave {
     @include sticker('Wave', 50px);
     position: absolute;
@@ -410,7 +465,7 @@ img {
   }
 }
 
-.issues {
+.issues, .common-ground {
   background-image: url(../assets/images/wave-pattern.svg);
   background-size: 30vh;
   background-repeat: repeat;
@@ -475,6 +530,13 @@ img {
       object-fit: cover;
       height: auto;
       border-radius: 10px;
+      aspect-ratio: 1 / 1;
+      @media screen and (max-width: 768px) {
+        // Fixed height for Safari on iOS
+        @supports (-webkit-touch-callout: none) {
+          height: 125px;
+        }
+      }
     }
     &-name {
       margin: 0;

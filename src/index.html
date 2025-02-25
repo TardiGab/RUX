@@ -4,31 +4,16 @@
 <head>
   <title>PRUX – Case Study</title>
   <meta charset="UTF-8" />
-  <meta
-    http-equiv="X-UA-Compatible"
-    content="IE=edge"
-  >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta
-    name="description"
-    content=""
-  >
+  <meta name="description" content="">
   <!-- Meta Partage -->
   <!-- Favicon -->
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link
-    rel="stylesheet"
-    href="styles/app.css"
-  >
+  <link rel="stylesheet" href="styles/app.css">
 
-  <script
-    src="scripts/app.js"
-    defer
-  ></script>
+  <script src="scripts/app.js" defer></script>
 </head>
 
 <body>
@@ -46,9 +31,34 @@
       <span>Albert Jacquard</span>
     </div>
     <div class="top__right">
-      <span>Menu</span>
+      <button id="navButton">Menu</button>
     </div>
   </div>
+  <nav class="nav" id="nav">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a href="#situation" class="nav__link">Mise en situation</a>
+      </li>
+      <li class="nav__item">
+        <a href="#first-contact" class="nav__link">Premier contact</a>
+      </li>
+      <li class="nav__item">
+        <a href="#issues" class="nav__link">Problèmes</a>
+      </li>
+      <li class="nav__item">
+        <a href="#first-ideas" class="nav__link">Premières idées</a>
+      </li>
+      <li class="nav__item">
+        <a href="#common-ground" class="nav__link">Mise en commun</a>
+      </li>
+      <li class="nav__item">
+        <a href="#in-depth-study" class="nav__link">Étude approfondie</a>
+      </li>
+      <li class="nav__item">
+        <a href="#team" class="nav__link">Équipe</a>
+      </li>
+    </ul>
+  </nav>
   <main>
     <section class="header">
       <div class="header__fire draggable"></div>
@@ -81,7 +91,7 @@
       <div class="situation__eyes draggable2"></div>
       <div class="situation__outer-container">
         <div class="situation__container">
-          <h2 class="situation__h2">Mise en situation</h2>
+          <h2 class="situation__h2" id="situation">Mise en situation</h2>
           <p class="situation__p">Dans le cadre de notre projet Rethinking UX (option Design Web & Transmédia à la
             Haute-École Albert Jacquard), nous avons dû réfléchir, par groupe, à une manière de réaménager une salle à
             disposition des étudiants (A083–A084). À la base, cette pièce appartenait à l’école secondaire Henri Maus,
@@ -104,7 +114,7 @@
       <div class="first-contact__fade-out--left"></div>
       <div class="first-contact__outer-container">
         <div class="first-contact__container">
-          <h2 class="first-contact__h2">Premier contact</h2>
+          <h2 class="first-contact__h2" id="first-contact">Premier contact</h2>
           <p class="first-contact__p">Nous avons, à l’aide d’un sondage, demandé aux étudiants leurs habitudes pendant
             leurs heures creuses. La majorité des étudiants, ne pouvant pas travailler à l’école, en profitent pour se
             détendre là où ils peuvent.</p>
@@ -138,9 +148,9 @@
     <section class="issues">
       <div class="issues__outer-container">
         <div class="issues__container">
-          <h2 class="issues__h2">Problèmes</h2>
+          <h2 class="issues__h2" id="issues">Problèmes</h2>
           <p class="issues__p">Tout d'abord, le A084 sert actuellement au Conseil Étudiants pour la livraison des Guido, donc il faut trouver un arrangement avec eux.</p>
-          <img src="./assets/images/IMG_0232.webp" alt="Photo du local avec des caisses de Guido" class="issues__image">
+          <img src="./assets/images/IMG_0232.webp" alt="Photo du local avec des caisses de Guido" class="issues__image issues__image--horizontal">
           <p class="issues__p">Lors d'une visite du A083, nous avons constaté un manque de prises, rendant l'installation d'ordinateurs impossible sans refaire l'installation électrique du local.</p>
           <p class="issues__p">Nous avons également remarqué que la pièce résonne. Pour y remédier, nous avons pensé à mettre des mousses acoustiques sur les murs, afin d'insonoriser correctement le local.</p>
           <p class="issues__p">La pièce est séparée par deux portes actuellement condamnée. Pour faciliter l'accès aux deux salles, il pourrait être intéressant de rétablir l'ouverture de ces portes.</p>
@@ -152,11 +162,11 @@
     <section class="first-ideas">
       <div class="first-ideas__outer-container">
         <div class="first-ideas__container">
-          <h2 class="first-ideas__h2">Premières idées</h2>
+          <h2 class="first-ideas__h2" id="first-ideas">Premières idées</h2>
           <p class="first-ideas__p">Après avoir analysé la salle et ce qui se trouvait à notre disposition, nous avons réfléchi à ce que nous pourrions apporter de neuf à cette salle en fonction des demandes des étudiants.</p>
           <p class="first-ideas__p">Plusieurs points revenaient de manière récurrente : le manque de décoration et de confort au sein de l’école. D’après les réponses obtenues suite à notre formulaire, il n’y a en effet, en dehors de la cafétéria (qui n’est pas vraiment un endroit “calme”), pratiquement pas de salle aménagée, loin du bruit extérieur. Que ce soit pour se détendre, ou pour travailler, cette salle était donc parfaite pour cela, car elle se situe dans une annexe du bâtiment principal.</p>
           <p class="first-ideas__p">Deux points ont alors retenu notre attention. Premièrement, la décoration des murs. En effet, les murs de la salle étant simplement peints en blanc, cela donne une impression de vide, qui ne donne pas envie d’y rester. Notre idée principale est de décorer la pièce avec des affiches/travaux d’étudiants qu’ils pourraient accrocher aux murs.</p>
-          <img src="./assets/images/idees.webp" alt="Canva avec deux images présentes. Une avec une photo du B-74, montrant une affiche au mur. L'autre, contenant une capture d'écran du subreddit r/place." class="first-ideas__image">
+          <img src="./assets/images/idees.webp" alt="Canva avec deux images présentes. Une avec une photo du B-74, montrant une affiche au mur. L'autre, contenant une capture d'écran du subreddit r/place." class="first-ideas__image first-ideas__image--horizontal">
           <p class="first-ideas__p">Deuxièmement, l’idée d’aménager un coin tables/fauteuils en spirale pour qu’il se différencie des tables d’école plus classiques. Cet étalage serait collé contre l’un des murs de la salle, prenant toute sa largeur. Cependant, étant donné le budget limité, c’est trop compliqué à réaliser.</p>
           <img src="./assets/images/5-Merchant-Square-Coworking-Space-LONDON-by-WeWork-1.webp" alt="Vue du dessus d'un espace de coworking avec des tables et des fauteuils en spirale." class="first-ideas__image first-ideas__image--vertical">
           <p class="first-ideas__p">Nous avons donc retenu l’idée principale des affiches sur le mur, bien plus abordable que les fauteuils, en gardant quand même l’idée en tête au cas où une solution serait trouvée.</p>
@@ -166,26 +176,30 @@
     <section class="common-ground">
       <div class="common-ground__outer-container">
         <div class="common-ground__container">
-          <h2 class="common-ground__h2">Mise en commun</h2>
+          <h2 class="common-ground__h2" id="common-ground">Mise en commun</h2>
           <p class="common-ground__p">Une fois que chaque groupe a fini ses recherches de problématiques et d’idées en découlant, nous avons ensuite mis en commun toutes nos idées afin de se répartir les tâches et assurer la cohérence du projet global. Chaque groupe a donc une tâche précise à réaliser : nous nous occuperons de la décoration murale, certains de la porte, d’autres de l’agencement des meubles, etc.</p>
-          <img src="./assets/images/IMG_7569.webp" alt="Image d'un groupe de personnes sur plusieurs tables en train de discuter." class="common-ground__image">
+          <img src="./assets/images/IMG_7569.webp" alt="Image d'un groupe de personnes sur plusieurs tables en train de discuter." class="common-ground__image common-ground__image--horizontal">
         </div>
       </div>
     </section>
     <section class="in-depth-study">
+      <div class="in-depth-study__fade-out--top"></div>
+      <div class="in-depth-study__fade-out--left"></div>
+      <div class="in-depth-study__fade-out--right"></div>
+      <div class="in-depth-study__fade-out--bottom"></div>
       <div class="in-depth-study__outer-container">
         <div class="in-depth-study__container">
-          <h2 class="in-depth-study__h2">Étude approfondie</h2>
+          <h2 class="in-depth-study__h2" id="in-depth-study">Étude approfondie</h2>
           <p class="in-depth-study__p">Suite à cette mise en commun, nous nous sommes penché sur notre idée d’affiches. Nous avons décidé de partir sur une bâche à accrocher sur l’un des murs de la pièce grâce à des ficelles et des anneaux ancrés dans le mur. En premier lieu, nous voulions y insérer des travaux d’étudiants d’options différentes, un peu dans le même style que les posters/affiches/bâches des journées portes ouvertes de l’école. Le problème est qu’il faudrait l’autorisation de chaque étudiant pour pouvoir utiliser leurs travaux, ou bien demander directement aux professeurs de faire une sélection, ce qui est compliqué à cause des délais.</p>
           <p class="in-depth-study__p">Une autre solution, serait de remplacer la bâche par des néons, des leds, des plantes aux murs ou d’autres éléments moins présents dans les différents bâtiments de l’école afin de combler un peu cette impression de blanc/de vide/de connu. On utiliserait cette option si le timing devenait trop juste pour obtenir les travaux des élèves.</p>
           <img src="./assets/images/neons-on-the-wall.webp" alt="Image d'un mur avec des néons formant la phrase 'I was born not knowing', avec des plantes grimpantes." class="in-depth-study__image in-depth-study__image--vertical">
           <p class="in-depth-study__p">Dans ce but, pour ajouter un peu de variation et s’éloigner du fait d’avoir des bâches partout dans l’école, nous avons eu pour idée de mettre des mousses acoustiques sur certains murs de la salle. En effet, la hauteur sous plafond étant très grande, la pièce résonne beaucoup. L’installation de ces mousses permettrait de réduire considérablement les échos de la salle tout en contribuant à sa décoration.</p>
-          <img src="./assets/images/mousses-acoustiques.webp" alt="Image d'un mur avec plusieurs mousses acoustiques colorées." class="in-depth-study__image">
+          <img src="./assets/images/mousses-acoustiques.webp" alt="Image d'un mur avec plusieurs mousses acoustiques colorées." class="in-depth-study__image in-depth-study__image--horizontal">
         </div>
       </div>
     </section>
     <section class="team">
-      <h2 class="team__h2">Équipe</h2>
+      <h2 class="team__h2" id="team">Équipe</h2>
       <ul class="team__list">
         <li>
           <div class="team__member">
