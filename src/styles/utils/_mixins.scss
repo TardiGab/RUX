@@ -1,0 +1,25 @@
+@mixin sticker($background, $size: 1em) {
+  background-image: url(../assets/images/#{$background}.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  vertical-align: middle;
+  height: $size;
+  width: $size;
+}
+
+@mixin absolute-sticker($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin flex-center($direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}

@@ -29,6 +29,8 @@
     "sass-loader": "^12.4.0"
   },
   "dependencies": {
+    "chart.js": "^4.4.8",
+    "chartjs-plugin-datalabels": "^2.2.0",
     "gsap": "^3.12.7"
   }
 }
