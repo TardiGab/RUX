@@ -10,7 +10,7 @@ gsap.registerPlugin(Draggable);
 const navButton = document.getElementById("navButton");
 const nav = document.getElementById("nav");
 
-navButton.addEventListener("click", function() {
+navButton.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
 
@@ -34,15 +34,24 @@ Draggable.create(".wave-draggable", {
   bounds: ".first-contact",
 });
 
+Draggable.create(".cat-draggable", {
+  bounds: ".team",
+});
+
+Draggable.create(".cola-draggable", {
+  bounds: ".team",
+  onPress: function() {
+    gsap.to(this.target, {
+      duration: 0.5,
+      scale: 1.2,
+    });
+  }
+});
+
 const freeTimeSurvey = document.getElementById("freeTimeSurvey");
 const utilitySurvey = document.getElementById("utilitySurvey");
 const roomIssuesSurvey = document.getElementById("roomIssuesSurvey");
 const decorationSurvey = document.getElementById("decorationSurvey");
-
-const epilogue = new FontFace("Epilogue", "url(../assets/fonts/Epilogue-Variable.woff2)");
-epilogue.load().then(function(loadedFace) {
-  document.fonts.add(loadedFace);
-});
 
 new Chart(freeTimeSurvey, {
   type: "pie",
