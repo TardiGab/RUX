@@ -29,22 +29,6 @@ Draggable.create(".draggable", {
   }
 });
 
-Draggable.create(".draggable2", {
-  bounds: ".situation",
-  onDragStart: function() {
-    gsap.to(this.target, {
-      duration: 0.3,
-      scale: 1.2,
-    });
-  }, 
-  onDragEnd: function() {
-    gsap.to(this.target, {
-      duration: 0.3,
-      scale: 1,
-    });
-  }
-});
-
 Draggable.create(".puke-draggable", {
   bounds: ".situation",
   onDragStart: function() {
@@ -187,6 +171,27 @@ Draggable.create(".airplane-draggable", {
       scale: 1,
     });
   }
+});
+
+const pruxText = document.getElementById("prux");
+const footerSticker = document.getElementById("footerSticker");
+
+pruxText.addEventListener("mouseover", () => {
+  gsap.to(footerSticker, {
+    duration: 0.5,
+    scale: 1.1,
+    rotate: 15,
+    x: 50,
+  });
+});
+
+pruxText.addEventListener("mouseout", () => {
+  gsap.to(footerSticker, {
+    duration: 0.5,
+    scale: 1,
+    rotate: -15,
+    x: 0,
+  });
 });
 
 const freeTimeSurvey = document.getElementById("freeTimeSurvey");

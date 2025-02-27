@@ -3,6 +3,10 @@
 
 @use "components/type" as *;
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -28,7 +32,7 @@ button {
   position: fixed;
   top: 0;
   left: 0;
-  width: calc(100% - 2rem);
+  width: 100%;
   z-index: 1000;
   display: flex;
   flex-direction: row;
@@ -106,6 +110,7 @@ button {
   align-items: center;
   justify-content: center;
   height: 85vh;
+  font-size: $h1-size;
   @media screen and (max-width: 768px) {
     height: 75vh;
   }
@@ -192,7 +197,9 @@ button {
     left: 5%;
     transform: rotate(15deg);
     @media screen and (max-width: 768px) {
-      display: none;
+      @include sticker('Fire', 1em);
+      top: 15%;
+      left: 10%;
     }
   }
   &__frangipane {
@@ -266,16 +273,16 @@ button {
   position: relative;
   z-index: 1;
   border-bottom: 2px solid $text-color;
-  &__eyes {
-    @include sticker('Eyes', 100px);
-    position: absolute;
-    top: 10%;
-    left: 17%;
-    z-index: 999;
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
-  }
+  // &__eyes {
+  //   @include sticker('Eyes', 100px);
+  //   position: absolute;
+  //   top: 10%;
+  //   left: 17%;
+  //   z-index: 999;
+  //   @media screen and (max-width: 768px) {
+  //     display: none;
+  //   }
+  // }
   &__outer-container {
     padding: $padding-container;
     border-radius: $border-radius;
@@ -302,13 +309,9 @@ button {
     font-size: $h2-size;
     color: $heading-color;
     margin: 0;
-    margin-bottom: 47px;
+    margin-bottom: 1em;
     @media screen and (max-width: 768px) {
-      position: absolute;
-      top: -80px;
-      left: 0;
-      width: 100%;
-      margin-top: 1.5rem;
+      margin-bottom: 1em;
     }
   }
   &__p {
@@ -543,7 +546,7 @@ button {
     }
   }
   &__sticker {
-    z-index: 1000;
+    z-index: 9999;
     @media screen and (max-width: 768px) {
       display: none;
     }
@@ -552,12 +555,18 @@ button {
       position: absolute;
       top: -25px;
       left: -25px;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
     &--cola {
       @include sticker('CoolCola', 100px);
       position: absolute;
       top: -30px;
       right: -30px;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
     &--cool {
       @include sticker('Cool', 100px);
@@ -565,6 +574,9 @@ button {
       bottom: 10px;
       left: -10px;
       transform: rotate(-15deg);
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
     &--d20 {
       @include sticker('D20', 100px);
@@ -572,6 +584,9 @@ button {
       bottom: -30px;
       left: -30px;
       transform: rotate(-5deg);
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
     &--apple {
       @include sticker('FreshApple', 100px);
@@ -579,12 +594,18 @@ button {
       bottom: 10px;
       right: -30px;
       transform: rotate(5deg);
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
     &--airplane {
       @include sticker('Airplane', 100px);
       position: absolute;
       top: -10px;
       right: 30px;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
   }
   &__fade-out--bottom {
@@ -599,8 +620,11 @@ button {
 }
 
 .footer {
-  min-height: 70vh;
+  min-height: 65vh;
   @include flex-center(column);
+  @media screen and (max-width: 768px) {
+    min-height: 50vh;
+  }
   &__top, &__bottom {
     width: 100%;
     height: 100%;
@@ -610,17 +634,33 @@ button {
     display: flex;
     align-items: end;
     padding-left: 10vw;
+    @media screen and (max-width: 768px) {
+      padding-left: 5vw;
+      align-items: center;
+    }
   }
   &__bottom {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1, 1fr);
     align-items: center;
+    font-size: $small-el-size;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      flex: 0;
+    }
     &--left {
       justify-self: center;
+      @media screen and (max-width: 768px) {
+        justify-self: center;
+      }
     }
     &--middle {
       justify-self: center;
+      @media screen and (max-width: 768px) {
+        justify-self: center;
+      }
     }
     &--right {
       justify-self: center;
@@ -643,12 +683,16 @@ button {
     }
   }
   &__text {
-    font-size: $h1-size;
+    font-size: $footer-rux-size;
     color: $text-color;
     margin: 0;
     line-height: .9;
     display: flex;
     flex-direction: column;
+    position: relative;
+    span {
+      max-width: fit-content;
+    }
     span:first-child {
       font-weight: 900;
     }
@@ -666,6 +710,18 @@ button {
         color: $heading-color;
       }
     }
-
+  }
+  &__sticker {
+    &--laugh {
+      @include sticker('Laugh', .75em);
+      position: absolute;
+      top: -2px;
+      left: 36%;
+      z-index: -1;
+      transform: rotate(-15deg);
+      @media screen and (max-width: 768px) {
+        @include sticker('Laugh', .75em);
+      }
+    }
   }
 }

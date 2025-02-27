@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
   <title>PRUX – Case Study</title>
@@ -88,7 +88,6 @@
       <span>Aménagement d'une salle de classe</span>
     </div>
     <section class="situation">
-      <div class="situation__eyes draggable2"></div>
       <div class="situation__outer-container">
         <div class="situation__container">
           <h2 class="situation__h2" id="situation">Mise en situation</h2>
@@ -119,18 +118,18 @@
             leurs heures creuses. La majorité des étudiants, ne pouvant pas travailler à l’école, en profitent pour se
             détendre là où ils peuvent.</p>
           <h3 class="first-contact__h3">Que faites-vous pendant les heures creuses ?</h3>
-          <div class="free-time-survey"><canvas id="freeTimeSurvey"></canvas></div>
+          <div class="first-contact__survey"><canvas id="freeTimeSurvey"></canvas></div>
           <p class="first-contact__p">Nous avons également relevé que les étudiants sont partagés entre un esapce de
             travail et un endroit de détente pour les heures creuses, tandis que d'autres veulent réunir les deux.</p>
           <h3 class="first-contact__h3">Quelle utilité souhaitez-vous pour la salle ?</h3>
-          <div class="utility"><canvas id="utilitySurvey"></canvas></div>
+          <div class="first-contact__survey"><canvas id="utilitySurvey"></canvas></div>
           <p class="first-contact__p">Nous devons ajouter à ça que la majorité des outils disponibles dans l'école sont
             numériques, pourtant les étudiants soulignent un grand manque de prises accessibles pour brancher et
             recharger leurs appareils. Enfin, la plupart des ordinateurs ou autres appareils à disposition se trouvent
             dans les classes où les professeurs donnent cours, par conséquent, l'accès libre au matériel est impossible
             pendant les heures creuses.</p>
           <h3 class="first-contact__h3">Qu'est-ce qui vous dérange dans les autres salles ?</h3>
-          <div class="d"><canvas id="roomIssuesSurvey"></canvas></div>
+          <div class="first-contact__survey"><canvas id="roomIssuesSurvey"></canvas></div>
           <p class="first-contact__p">L'aménagement des salles et leur ambiance sont également soulignés. En effet, les
             élèves trouvent que les autres salles manquent de décoration, bien que celle-ci soit importante, et qu'elles
             ne permettent pas de s'installer confortablement, sachant qu'il n'y en a déjà pas beaucoup.</p>
@@ -250,8 +249,9 @@
   <footer class="footer">
     <div class="footer__top">
       <div class="footer__text">
-        <span>PRUX</span>
+        <span id="prux">PRUX</span>
         <span>Rethinking UX</span>
+        <div class="footer__sticker--laugh" id="footerSticker"></div>
       </div>
     </div>
     <div class="footer__bottom">
