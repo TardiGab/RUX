@@ -73,7 +73,7 @@ button {
   right: 0;
   z-index: 1000;
   transform: translateX(110%);
-  transition: transform .3s ease-in;
+  transition: transform .6s cubic-bezier(0.68,-0.55,0.27,1.55);
   margin-right: .5rem;
   &.active {
     transform: translateX(0);
@@ -489,6 +489,7 @@ button {
   min-height: 100vh;
   padding-top: 47px;
   padding-bottom: 47px;
+  position: relative;
   &__h2 {
     font-size: $h2-size;
     color: $text-color;
@@ -558,5 +559,113 @@ button {
       top: -30px;
       right: -30px;
     }
+    &--cool {
+      @include sticker('Cool', 100px);
+      position: absolute;
+      bottom: 10px;
+      left: -10px;
+      transform: rotate(-15deg);
+    }
+    &--d20 {
+      @include sticker('D20', 100px);
+      position: absolute;
+      bottom: -30px;
+      left: -30px;
+      transform: rotate(-5deg);
+    }
+    &--apple {
+      @include sticker('FreshApple', 100px);
+      position: absolute;
+      bottom: 10px;
+      right: -30px;
+      transform: rotate(5deg);
+    }
+    &--airplane {
+      @include sticker('Airplane', 100px);
+      position: absolute;
+      top: -10px;
+      right: 30px;
+    }
+  }
+  &__fade-out--bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background: linear-gradient(to top, $bg-color 0%, transparent 100%);
+    z-index: 1000;
+  }
+}
+
+.footer {
+  min-height: 70vh;
+  @include flex-center(column);
+  &__top, &__bottom {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+  }
+  &__top {
+    display: flex;
+    align-items: end;
+    padding-left: 10vw;
+  }
+  &__bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    align-items: center;
+    &--left {
+      justify-self: center;
+    }
+    &--middle {
+      justify-self: center;
+    }
+    &--right {
+      justify-self: center;
+      span {
+        a {
+          font-weight: 600;
+          background-image: $gradient;
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: transparent;
+          display: inline-block;
+          position: relative;
+          transition: all .3s ease-in;
+          &:hover {
+            font-weight: 900;
+          }
+        }
+      }
+    }
+  }
+  &__text {
+    font-size: $h1-size;
+    color: $text-color;
+    margin: 0;
+    line-height: .9;
+    display: flex;
+    flex-direction: column;
+    span:first-child {
+      font-weight: 900;
+    }
+  }
+  &__socials {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    &-item {
+      color: $text-color;
+      transition: all .3s;
+      &:hover {
+        color: $heading-color;
+      }
+    }
+
   }
 }

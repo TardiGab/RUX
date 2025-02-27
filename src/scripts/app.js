@@ -1,7 +1,6 @@
 import gsap from "gsap";
 import Draggable from "gsap/src/Draggable";
 import Chart from 'chart.js/auto';
-import { toPadding } from "chart.js/helpers";
 
 gsap.registerPlugin(Draggable);
 
@@ -16,34 +15,176 @@ navButton.addEventListener("click", () => {
 
 Draggable.create(".draggable", {
   bounds: ".header",
+  onDragStart: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1.2,
+    });
+  }, 
+  onDragEnd: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1,
+    });
+  }
 });
 
 Draggable.create(".draggable2", {
   bounds: ".situation",
+  onDragStart: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1.2,
+    });
+  }, 
+  onDragEnd: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1,
+    });
+  }
 });
 
 Draggable.create(".puke-draggable", {
   bounds: ".situation",
+  onDragStart: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1.2,
+    });
+  }, 
+  onDragEnd: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1,
+    });
+  }
 });
 
 Draggable.create(".undo-draggable", {
   bounds: ".situation",
+  onDragStart: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1.2,
+    });
+  }, 
+  onDragEnd: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1,
+    });
+  }
 });
 
 Draggable.create(".wave-draggable", {
   bounds: ".first-contact",
+  onDragStart: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1.2,
+    });
+  }, 
+  onDragEnd: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1,
+    });
+  }
 });
 
 Draggable.create(".cat-draggable", {
   bounds: ".team",
+  onDragStart: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1.2,
+    });
+  }, 
+  onDragEnd: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1,
+    });
+  }
 });
 
 Draggable.create(".cola-draggable", {
   bounds: ".team",
-  onPress: function() {
+  onDragStart: function() {
     gsap.to(this.target, {
-      duration: 0.5,
+      duration: 0.3,
       scale: 1.2,
+    });
+  }, 
+  onDragEnd: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1,
+    });
+  }
+});
+
+Draggable.create(".cool-draggable", {
+  bounds: ".team",
+  onDragStart: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1.2,
+    });
+  }, 
+  onDragEnd: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1,
+    });
+  }
+});
+
+Draggable.create(".d20-draggable", {
+  bounds: ".team",
+  onDragStart: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1.2,
+    });
+  }, 
+  onDragEnd: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1,
+    });
+  }
+});
+
+Draggable.create(".apple-draggable", {
+  bounds: ".team",
+  onDragStart: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1.2,
+    });
+  }, 
+  onDragEnd: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1,
+    });
+  }
+});
+
+Draggable.create(".airplane-draggable", {
+  bounds: ".team",
+  onDragStart: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1.2,
+    });
+  }, 
+  onDragEnd: function() {
+    gsap.to(this.target, {
+      duration: 0.3,
+      scale: 1,
     });
   }
 });
